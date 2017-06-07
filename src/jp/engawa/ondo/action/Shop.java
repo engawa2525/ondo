@@ -2,13 +2,17 @@ package jp.engawa.ondo.action;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import jp.engawa.common.db.Db;
 import jp.engawa.gs.common.Entity;
 import jp.engawa.gs.common.PropertyCopy;
 import jp.engawa.gs.common.Util;
+import jp.engawa.ondo.action.shop.Target;
 import jp.engawa.ondo.common.AppAction;
 import jp.engawa.ondo.common.User;
+import jp.engawa.ondo.entity.OdTargetEntity;
 
 @Entity("jp.engawa.ondo.entity.OdShopEntity")
 public class Shop extends AppAction {
@@ -21,7 +25,8 @@ public class Shop extends AppAction {
 	protected int alert_status;
 	protected java.util.Date regist_dt;
 
-
+	protected List<Target> targets = new ArrayList<>();
+	
 	@Override
 	protected String execute(User user) throws IOException, SQLException {
 		this.prepare(user);
@@ -41,6 +46,8 @@ public class Shop extends AppAction {
 				en.setKeyIdAuto(this.id);
 				if (db.load(en)) {
 					PropertyCopy.copyDb(en, this);
+					
+					loadTargets(db);
 					return true;
 				} else {
 					this.setErrmsg("対象が存在しません。");
@@ -51,6 +58,17 @@ public class Shop extends AppAction {
 			}
 		} finally {
 			db.close();
+		}
+	}
+	protected void loadTargets(Db db) throws SQLException {
+		this.targets.clear();
+		String sql = "SELECT * FROM OD_TARGET WHERE SHOP_ID=[SID] ORDER BY TARGET_CD";
+		db.setSql(sql);
+		db.add("SID",this.id);
+		db.execute(OdTargetEntity.class);
+		while(db.next()) {
+			OdTargetEntity en = (OdTargetEntity)db.getEntity();
+			this.targets.add(new Target(en));
 		}
 	}
 	public Long getId() {
@@ -100,6 +118,14 @@ public class Shop extends AppAction {
 	}
 	public void setRegist_dt(java.util.Date regist_dt) {
 		this.regist_dt = regist_dt;
+	}
+
+	public List<Target> getTargets() {
+		return targets;
+	}
+
+	public void setTargets(List<Target> targets) {
+		this.targets = targets;
 	}
 
 }

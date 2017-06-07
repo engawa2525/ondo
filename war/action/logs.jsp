@@ -44,7 +44,7 @@
 				<th><en:label>ID</en:label></th>
 				<th><en:label>Status Kbn</en:label></th>
 				<th><en:label>Ymd</en:label></th>
-				<th><en:label>Log Key</en:label></th>
+				<th><en:label>Device cd</en:label></th>
 				<th><en:label>Field1</en:label></th>
 				<th><en:label>Field2</en:label></th>
 				<th><en:label>Field3</en:label></th>
@@ -56,7 +56,7 @@
 					<td><en:label name="id" /></td>
 					<td><en:label name="status_kbn" /></td>
 					<td><en:label name="ymd" /></td>
-					<td><en:label name="log_key" /></td>
+					<td><en:label  link="./device.do?device_cd={log_key}" name="log_key" /></td>
 					<td class="right"><en:label name="field1" /></td>
 					<td class="right"><en:label name="field2" /></td>
 					<td class="right"><en:label name="field3" /></td>

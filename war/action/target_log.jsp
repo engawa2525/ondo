@@ -75,7 +75,7 @@
 					<td class="event_status<en:label name="event_status"/>">
 						<en:input type="label" name="event_status" list="#{'0':'発生中','1':'解消済'}"/>
 					</td>
-					<td><en:label name="event_name"/></td>
+					<td><en:label link="./event.do?id={id}" name="event_name"/></td>
 				</tr>
 			</en:iterator>
 			</table>

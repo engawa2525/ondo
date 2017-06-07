@@ -7,7 +7,8 @@ import jp.engawa.gs.common.PropertyCopy;
 
 public class Item {
 	protected Long id;
-	protected String log_key;
+	protected String device_cd;
+	protected long target_id;
 	protected String field1;
 	protected String field2;
 	protected String field3;
@@ -25,10 +26,10 @@ public class Item {
 		this.id = id;
 	}
 	public String getLog_key() {
-		return log_key;
+		return device_cd;
 	}
-	public void setLog_key(String log_key) {
-		this.log_key = log_key;
+	public void setLog_key(String device_cd) {
+		this.device_cd = device_cd;
 	}
 	public String getField1() {
 		return field1;
@@ -65,6 +66,12 @@ public class Item {
 	}
 	public void setRegist_dt(java.util.Date regist_dt) {
 		this.regist_dt = regist_dt;
+	}
+	public long getTarget_id() {
+		return target_id;
+	}
+	public void setTarget_id(long target_id) {
+		this.target_id = target_id;
 	}
 
 }

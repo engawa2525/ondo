@@ -40,10 +40,10 @@
 			</tr>
 			<en:iterator>
 				<tr>
-					<td><en:label link="./target.do?id={id}" name="id" /></td>
+					<td><en:label name="id" /></td>
 					<td><en:input type="label" name="shop_id" list="shops"/></td>
 					<td><en:label name="target_cd" /></td>
-					<td><en:label name="target_name" /></td>
+					<td><en:label link="./target.do?id={id}" name="target_name" /></td>
 					<td><en:label name="alert_num" /></td>
 					<td><en:label name="target_desc" /></td>
 					<td><en:input type="label" name="target_status" list="{'0':'稼働中','1':'停止中'}"/></td>

@@ -12,6 +12,7 @@
 	<div class="container">
 		<div class="control">
 			<div class="control_item"><en:label link="./devices.do">List</en:label></div>
+			<div class="control_item"><en:label link="./target_log.do?id={target_id}">Log</en:label></div>
 			<div class="control_item"><en:label link="./device_edit.do?id={id}">Edit</en:label></div>
 			<div class="clear"></div>
 		</div>

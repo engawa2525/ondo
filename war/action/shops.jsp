@@ -30,9 +30,9 @@
 			</tr>
 			<en:iterator>
 				<tr>
-					<td><en:label link="./shop.do?id={id}" name="id" /></td>
+					<td><en:label name="id" /></td>
 					<td><en:label name="shop_cd" /></td>
-					<td><en:label name="shop_name" /></td>
+					<td><en:label link="./shop.do?id={id}"  name="shop_name" /></td>
 					<td><en:label name="mail_addr" /></td>
 					<td><en:label name="open_ymd" /></td>
 					<td><en:label name="close_ymd" /></td>

@@ -1,263 +1,551 @@
 /* CSS for onze.cool */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
-	margin:0px;
-	font-family: 'Hiragino Kaku Gothic ProN', 'ÉqÉâÉMÉmäpÉS ProN W3', Meiryo, ÉÅÉCÉäÉI, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
+margin:0px;
+
+font-family: 'Hiragino Kaku Gothic ProN', '„Éí„É©„ÇÆ„ÉéËßí„Ç¥ ProN W3', Meiryo, „É°„Ç§„É™„Ç™, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
 }
+
 form {
-	margin:0px;
+
+margin:0px;
+
 }
+
+
 
 h1 {
-	margin:0px;
+
+margin:0px;
+
 }
+
 h2 {
-	margin:0px;
+
+margin:0px;
+
 }
+
 .clear {
-	clear: both;
+
+clear: both;
+
 }
+
 .right {
-	text-align: right;
+
+text-align: right;
+
 }
+
 a {
-	color:blue;
+
+color:blue;
+
 }
+
 /* HEADER */
+
 .logo {
-	padding:10px;
-	background-color: #222;
-	font-family: 'Montserrat', sans-serif;
-	font-size:xx-large;
-	color:#fff;
-	background: linear-gradient(to bottom,#666666 0%,#000000 100%);
+
+padding:10px;
+
+background-color: #222;
+
+font-family: 'Montserrat', sans-serif;
+
+font-size:xx-large;
+
+color:#fff;
+
+background: linear-gradient(to bottom,#666666 0%,#000000 100%);
+
 }
+
+
 
 .logo a {
-	text-decoration: none;
-	color:#fff;
+
+text-decoration: none;
+
+color:#fff;
+
 }
+
 .logout {
-	float: right;
+
+float: right;
+
 }
+
 .logout a {
-	color:orange;
-	margin-right:10px;
+
+color:orange;
+
+margin-right:10px;
+
 }
+
 .userinfo {
-	float: right;
-	color:#fff;
-	margin-right:10px;
+
+float: right;
+
+color:#fff;
+
+margin-right:10px;
+
 }
+
 .errmsg {
-	margin: 10px;
-	padding:10px;
-	border: solid 1px #ff0000;
-	background-color: #ffeeee;
+
+margin: 10px;
+
+padding:10px;
+
+border: solid 1px #ff0000;
+
+background-color: #ffeeee;
+
 }
+
 .info {
-	margin: 10px;
-	padding:10px;
-	border: solid 1px #0000ff;
-	background-color: #eeeeff;
+
+margin: 10px;
+
+padding:10px;
+
+border: solid 1px #0000ff;
+
+background-color: #eeeeff;
+
 }
+
 h2 {
-	margin:10px;
+
+margin:10px;
+
 }
+
 /* HEADER END */
 
+
+
 /* FOOTER */
+
 .footer {
-	
+
+
 }
+
 .footer_text {
-	font-size:xx-small;
-	text-align: center;
-	font-family: monospace;
+
+font-size:xx-small;
+
+text-align: center;
+
+font-family: monospace;
+
 }
+
 .gen_links {
-	text-align: center;
+
+text-align: center;
+
 }
+
 .gen_links a {
-	color:#888;
-	font-size:xx-small;
+
+color:#888;
+
+font-size:xx-small;
+
 }
+
+
 
 /* FOOTER END */
+
 /* CONTAINER */
+
 .container {
-	/*
-	width:1200px;
-	background-color:#fff;
-	margin-left:auto;
-	margin-right:auto;
-	*/
+
+/*
+
+width:1200px;
+
+background-color:#fff;
+
+margin-left:auto;
+
+margin-right:auto;
+
+*/
+
 }
+
 .top_menus {
-	margin-left:10px;
+
+margin-left:10px;
+
 }
+
 .top_menu {
-	float: left;
+
+float: left;
+
 }
+
 .top_menu a {
-	margin:5px;
+
+margin:5px;
+
 }
+
 /* CONTAINER END */
+
 /* BLOCK */
+
 .block {
+
 }
+
 /* BLOCK END */
 
+
+
 /* FORM */
+
 .control {
-	padding-left:10px;
+
+padding-left:10px;
+
 }
+
 .control_item {
-	display: inline;
+
+display: inline;
+
 }
+
 .control_item a {
-	color:blue;
-	font-family: monospace;
+
+color:blue;
+
+font-family: monospace;
+
 }
+
 .frm {
-	margin-top:10px;
-	margin-bottom:10px;
+
+margin-top:10px;
+
+margin-bottom:10px;
+
 }
+
 .frmitem {
-	margin-bottom:5px;
-	border-bottom:solid 1px #eee;
-	padding-left:10px;
-	min-height: 3em;
+
+margin-bottom:5px;
+
+border-bottom:solid 1px #eee;
+
+padding-left:10px;
+
+min-height: 3em;
+
 }
+
 .frmtitle {
-	font-size:xx-small;
+
+font-size:xx-small;
+
 }
+
 .selectfield {
-	font-size:large;
+
+font-size:large;
+
 }
+
 .textfield {
-	font-size:large;
-	width:300px;
+
+font-size:large;
+
+width:300px;
+
 }
+
 .passwordfield {
-	font-size:large;
-	width:300px;
+
+font-size:large;
+
+width:300px;
+
 }
+
 .datefield {
-	font-size:large;
-	width:200px;	
+
+font-size:large;
+
+width:200px;
+
 }
+
 .textarea {
-	width:300px;
-	font-size:large;
-	height:2em;
+
+width:300px;
+
+font-size:large;
+
+height:2em;
+
 }
+
 .frmbuttons {
-	padding-left:10px;
+
+padding-left:10px;
+
 }
+
 .frmbutton {
-	font-size:large;
+
+font-size:large;
+
 }
+
 .delbutton {
-	float:right;
-	margin-right: 10px;
+
+float:right;
+
+margin-right: 10px;
+
 }
+
 .frmsubmit {
-	font-size:medium;
-	padding-left:10px;
-	padding-right:10px;
-	border:solid 1px #1166bb;
-	border-radius:3px;
-	background-color:#176bbe;
-	color:#ffffff;
-	background: linear-gradient(#4c94d6, #176bbe);
+
+font-size:medium;
+
+padding-left:10px;
+
+padding-right:10px;
+
+border:solid 1px #1166bb;
+
+border-radius:3px;
+
+background-color:#176bbe;
+
+color:#ffffff;
+
+background: linear-gradient(#4c94d6, #176bbe);
+
 }
+
 .frmbutton {
-	font-size:medium;
-	padding-left:10px;
-	padding-right:10px;
-	border:solid 1px #999999;
-	border-radius:3px;
-	background-color:#e3e3e3;
-	color:#000000;
-	background: linear-gradient(#f6f6f6, #e3e3e3);	
+
+font-size:medium;
+
+padding-left:10px;
+
+padding-right:10px;
+
+border:solid 1px #999999;
+
+border-radius:3px;
+
+background-color:#e3e3e3;
+
+color:#000000;
+
+background: linear-gradient(#f6f6f6, #e3e3e3);
+
 }
+
 /* FORM END */
 
+
+
 /* TABLE */
+
 .tbl {
-	margin-top:10px;
-	margin-bottom:10px;
-	margin-left:10px;
-	margin-right:10px;
-	border-collapse: collapse;
+
+margin-top:10px;
+
+margin-bottom:10px;
+
+margin-left:10px;
+
+margin-right:10px;
+
+border-collapse: collapse;
+
 }
+
 .tbl th{
-	font-weight: normal;
-	border:solid 1px #888;
-	font-size:small;
-	padding-right:5px;
-	padding-left:5px;
-	background-color: #eee;
-	background: linear-gradient(to bottom,#ffffff 0%,#eeeeee 100%);	
+
+font-weight: normal;
+
+border:solid 1px #888;
+
+font-size:small;
+
+padding-right:5px;
+
+padding-left:5px;
+
+background-color: #eee;
+
+background: linear-gradient(to bottom,#ffffff 0%,#eeeeee 100%);
+
 }
+
 .tbl td {
-	border:solid 1px #888;
-	font-size:small;
-	padding-right:5px;
-	padding-left:5px;
-	font-family: monospace;
+
+border:solid 1px #888;
+
+font-size:small;
+
+padding-right:5px;
+
+padding-left:5px;
+
+font-family: monospace;
+
 }
+
 /* TABLE END */
+
 .event_calendar {
-	border-collapse: collapse;
+
+border-collapse: collapse;
+
 }
+
 .event_calendar th {
-	border:solid 1px #888;
-	font-weight: normal;
-	font-size:xx-small;
+
+border:solid 1px #888;
+
+font-weight: normal;
+
+font-size:xx-small;
+
 }
+
 .event_calendar td {
-	border:solid 1px #888;
-	vertical-align: top;
-	font-size:xx-small;
-	padding-left:5px;
-	padding-right:5px;
+
+border:solid 1px #888;
+
+vertical-align: top;
+
+font-size:xx-small;
+
+padding-left:5px;
+
+padding-right:5px;
+
 }
+
 .event_calendar .target .event2 {
-	color:red;
-	background-image: url(../img/alert.orange.png);
+
+color:red;
+
+background-image: url(../img/alert.orange.png);
+
 }
+
 .event_calendar .target .event1 {
-	color:red;
-	background-image: url(../img/high.priority.png);
+
+color:red;
+
+background-image: url(../img/high.priority.png);
+
 }
+
 .event_calendar .target .event0 {
-	color:#888;
-	background-image: url(../img/chart.png);
+
+color:#888;
+
+background-image: url(../img/chart.png);
+
 }
+
 .event_calendar .day_head {
-	font-size:xx-small;
-	font-family: monospace;
-	text-align: right;
+
+font-size:xx-small;
+
+font-family: monospace;
+
+text-align: right;
+
 }
+
 .event_calendar .day_body {
+
 }
+
 .event_calendar .day_body a {
-	text-decoration:none;
-	padding-left:25px;
-	display: block;
-	margin:5px;
-	background-repeat: no-repeat;
-	background-size: 20px 20px;
-	height:20px;
-	vertical-align: middle;
+
+text-decoration:none;
+
+padding-left:25px;
+
+display: block;
+
+margin:5px;
+
+background-repeat: no-repeat;
+
+background-size: 20px 20px;
+
+height:20px;
+
+vertical-align: middle;
+
 }
+
 .top_img {
-	width:800px;
+
+width:800px;
+
 }
+
 .top_calendar_control {
+
 }
+
 .top_calendar_control img {
-	width:20px;
+
+width:20px;
+
+}
+
+.target_status0 a {
+	display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+.target_status0 a:hover {
+    background: #67c5ff;
+    color: white;
+}
+.target_status1 a {
+	display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #FA8072;
+    border: solid 2px #FA8072;
+    border-radius: 3px;
+    transition: .4s;
+}
+.target_status1 a:hover {
+    background: #FA8072;
+    color: white;
 }

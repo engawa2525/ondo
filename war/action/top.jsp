@@ -66,16 +66,27 @@
 				<th><en:label>Event Date</en:label></th>
 				<th><en:label>Evnet Status</en:label></th>
 				<th><en:label>Evnet Name</en:label></th>
+				<th><en:label>Evnet Id</en:label></th>
 			</tr>
 			<en:iterator name="events">
 				<tr>
-					<td><en:input type="label" name="shop_id" list="shops"/></td>
-					<td><en:input type="label" name="target_id" list="targets"/></td>
+					<td>
+						<a href="./shop.do?id=<en:label name="shop_id"/>">
+							<en:input type="label" name="shop_id" list="shops"/>
+						</a>		
+					</td>
+							
+					<td>
+						<a href="./target.do?id=<en:label name="target_id"/>">
+							<en:input type="label" name="target_id" list="targets"/>
+						</a>			
+					</td>
 					<td><en:label name="event_dt"/></td>
 					<td class="event_status<en:label name="event_status"/>">
 						<en:input type="label" name="event_status" list="#{'0':'発生中','1':'解消済'}"/>
 					</td>
 					<td><en:label name="event_name"/></td>
+					<td><en:label name="id" link="./event.do?id={id}"/></td>
 				</tr>
 			</en:iterator>
 			</table>

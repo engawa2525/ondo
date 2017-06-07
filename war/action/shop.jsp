@@ -58,7 +58,16 @@
 					<div class="frmfield"><en:input type="label" name="regist_dt"/></div>
 					<div class="clear"></div>
 				</div>
-
+				<div class="frmitem">
+					<div class="frmtitle">冷蔵庫</div>
+					<div class="frmfield">
+						<en:iterator name="targets">
+							<span class="target_status<en:label name="target_status"/>" >
+								<en:label link="./target.do?id={target_id}" name="target_name"/>
+							</span>
+						</en:iterator>
+					</div>
+				</div>
 			</div><!-- frm -->
 		</div><!-- block -->	
 	</div><!-- container -->

@@ -39,6 +39,22 @@ public class Device extends AppAction {
 	}
 
 	protected void prepare(jp.engawa.ondo.common.User user) throws SQLException {
+		if(!this.isEmpty(this.device_cd)) {
+			Db db = null;
+			try {
+				db = this.getDb();
+				String sql = "SELECT ID FROM OD_DEVICE T WHERE T.DEVICE_CD=[CD] AND T.DEL_KBN=0 ORDER BY T.ID LIMIT 1";
+				db.setSql(sql);
+				db.add("CD", this.device_cd);
+				db.execute();
+				while(db.next()) {
+					this.id = db.getLong(1);
+				}
+			} finally {
+				db.close();
+			}
+			
+		}
 	}
 	
 	protected void loadKbn() throws SQLException {
