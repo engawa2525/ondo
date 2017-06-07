@@ -1,0 +1,48 @@
+package {package};
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import jp.engawa.common.db.Db;
+import jp.engawa.gs.common.Entity;
+import jp.engawa.gs.common.PropertyCopy;
+import {commonPackage}.AppAction;
+import {commonPackage}.User;
+
+@Entity("{EntityClassName}")
+public class {title} extends AppAction {
+{properties}
+
+	@Override
+	protected String execute(User user) throws IOException, SQLException {
+		this.prepare(user);
+		this.load();
+		return null;
+	}
+
+	protected void prepare({commonPackage}.User user) throws SQLException {
+	}
+
+	protected boolean load() throws SQLException {
+		Db db = null;
+		try {
+			db = this.getDb();
+			if (this.id != null && this.id > 0) {
+				{EntityClassName} en = new {EntityClassName}();
+				en.setKeyIdAuto(this.id);
+				if (db.load(en)) {
+					PropertyCopy.copyDb(en, this);
+					return true;
+				} else {
+					this.setErrmsg("対象が存在しません。");
+					return false;
+				}
+			} else {
+				return false;
+			}
+		} finally {
+			db.close();
+		}
+	}
+{getter_setter}
+}

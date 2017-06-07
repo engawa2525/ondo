@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource name="mailSession" auth="Container" type="javax.mail.Session" mail.smtp.host="localhost"/>
+ <Resource name="db"
+         auth="Container"
+         scope="Shareable"
+         type="javax.sql.DataSource"
+         driverClassName="com.mysql.jdbc.Driver"
+         url="jdbc:mysql://localhost/ondo?characterEncoding=utf8"
+         username="root"
+         password=""
+         maxActive="10"
+         maxIdle="2"
+         testOnBorrow="true"
+         validationQuery="select 1 from dual"
+         maxWait="-1"/>
+</Context>

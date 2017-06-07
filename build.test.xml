@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="dist" basedir=".">
+	<property name="environment" value="dev" />
+	<property name="war.home" value="./war" />
+	<property name="build.dir" value="./build3" />
+	<property name="build2.dir" value="./build2" />
+	<property name="web-app.name" value="ondo" />
+	<property name="class.dir" value="./build/classes" />
+
+	<target name="dist">
+		<echo message="begin task" />
+
+		<delete dir="${build.dir}" failonerror="false" />
+		<mkdir dir="${build.dir}" />
+		
+		<delete dir="${build2.dir}" failonerror="false" />
+		<mkdir dir="${build2.dir}" />
+
+		<echo message="copy xml" />
+		<copy todir="${build.dir}">
+			<fileset dir="${war.home}">
+				<include name="WEB-INF/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${build2.dir}">
+			<fileset dir="${war.home}">
+				<include name="WEB-INF/*.xml" />
+			</fileset>
+		</copy>
+		
+		<echo message="copy classes/jar/zip" />
+		<copy todir="${build.dir}/WEB-INF/classes/">
+			<fileset dir="${class.dir}">
+				<include name="**/*.class" />
+				<include name="**/*.properties" />				
+			</fileset>
+		</copy>
+		<copy todir="${build2.dir}/WEB-INF/classes/">
+			<fileset dir="${class.dir}">
+				<include name="**/*.class" />
+				<include name="**/*.properties" />				
+			</fileset>
+		</copy>		
+
+		<echo message="copy classes/jar/zip" />
+		<copy todir="${build.dir}">
+			<fileset dir="${war.home}">
+				<include name="**/*.class" />
+				<include name="**/*.swf" />
+				<include name="**/*.png" />
+				<include name="**/*.jpeg" />
+				<include name="**/*.jpg" />
+				<include name="**/*.jar" />
+				<include name="**/*.zip" />
+				<include name="**/*.txt" />
+				<include name="**/*.gif" />
+			</fileset>
+		</copy>
+		<copy todir="${build2.dir}">
+			<fileset dir="${war.home}">
+				<include name="**/*.class" />
+				<include name="**/*.swf" />
+				<include name="**/*.png" />
+				<include name="**/*.jpeg" />
+				<include name="**/*.jpg" />
+				<include name="**/*.txt" />
+				<include name="**/*.gif" />
+			</fileset>
+		</copy>
+
+		<echo message="copy jsp/html" />
+		<copy todir="${build.dir}">
+			<fileset dir="${war.home}">
+				<include name="**/*.html" />
+				<include name="**/*.htm" />
+				<include name="**/*.jsp" />
+				<include name="**/*.css" />
+				<include name="**/*.js" />
+				<include name="**/*.jpg" />
+				<include name="**/*.png" />
+				<include name="**/*.svg" />
+				<include name="**/*.gif" />
+				<include name="**/*.tld" />
+				<include name="**/*.swf" />
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+				<exclude name="/tmp/**" />
+			</fileset>
+		</copy>
+		<copy todir="${build2.dir}">
+			<fileset dir="${war.home}">
+				<include name="**/*.html" />
+				<include name="**/*.htm" />
+				<include name="**/*.jsp" />
+				<include name="**/*.css" />
+				<include name="**/*.js" />
+				<include name="**/*.jpg" />
+				<include name="**/*.png" />
+				<include name="**/*.svg" />
+				<include name="**/*.gif" />
+				<include name="**/*.tld" />
+				<include name="**/*.swf" />
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+				<exclude name="/tmp/**" />
+							</fileset>
+		</copy>
+
+		<jar destfile="${web-app.name}.war.biz" basedir="${build.dir}" />
+		<zip destfile="${web-app.name}.class.zip"
+			 basedir="${build2.dir}"
+		/>
+		<zip destfile="${web-app.name}.jar" basedir="${build2.dir}/WEB-INF/classes/" />
+
+		</target>
+</project>
